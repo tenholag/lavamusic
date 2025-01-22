@@ -24,14 +24,6 @@ import LavalinkClient from './LavalinkClient';
 import Logger from './Logger';
 import type { Command } from './index';
 from dotenv import load_dotenv
-import os
-
-load_dotenv()  # Carrega as variáveis do arquivo .env
-
-TOKEN = os.getenv("BOT_TOKEN")
-if not TOKEN:
-    raise ValueError("O token do bot não foi definido. Certifique-se de configurá-lo no arquivo .env.")
-
 
 export default class Lavamusic extends Client {
 	public commands: Collection<string, any> = new Collection();
